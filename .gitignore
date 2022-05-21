@@ -1,6 +1,7 @@
 /target
 /frontend/node_modules
 /frontend/build
+tccfun/src/main/resources/application.properties
 
 ### Eclipse + vscode ###
 

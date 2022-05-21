@@ -12,10 +12,10 @@ Requisite:
 ```sh
 $ mvn clean
 $ mvn package
-$ java -jar target/tccflow-1.0.0-SNAPSHOT.jar
+$ java -jar target/tccfun-1.0.0-SNAPSHOT.jar
 ```
 The backend and the frontend are compiled into a single executable `.jar` file.
-PS: If it's required another `.jar`, you will have to delete the file on `target/tccflow-1.0.0-SNAPSHOT.jar` to create other one using the same name.
+PS: If it's required another `.jar`, you will have to delete the file on `target/tccfun-1.0.0-SNAPSHOT.jar` to create other one using the same name.
 
 ####  App running
 Local:            http://localhost:8080/       
