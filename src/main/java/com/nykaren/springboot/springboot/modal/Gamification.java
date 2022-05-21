@@ -1,17 +1,9 @@
 package com.nykaren.springboot.springboot.modal;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_gamification")
@@ -35,15 +27,27 @@ public class Gamification {
     @NotNull
     private Integer gamification_points;
 
-	@Column
-    @OneToMany(mappedBy = "gamification_activity_gamification")
-    private List<GamificationActivity> gamification_activities = new ArrayList<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "tb_gamification_activity",
+            joinColumns = @JoinColumn(name = "gamification_id"),
+            inverseJoinColumns = @JoinColumn(name = "activity_id")
+    )
+    private Set<Activity> activities = new HashSet<>();
+
+    public void addActivity(Activity activity) {
+        this.activities.add(activity);
+    }
 
     @Override
     public String toString() {
-        return "Gamification [gamification_activities=" + gamification_activities + ", gamification_id="
-                + gamification_id + ", gamification_level=" + gamification_level + ", gamification_points="
-                + gamification_points + ", gamification_user=" + gamification_user + "]";
+        return "Gamification{" +
+                "gamification_id=" + gamification_id +
+                ", gamification_user=" + gamification_user +
+                ", gamification_level='" + gamification_level + '\'' +
+                ", gamification_points=" + gamification_points +
+                ", activities=" + activities +
+                '}';
     }
 
     public Integer getGamification_id() {
@@ -78,12 +82,11 @@ public class Gamification {
         this.gamification_points = gamification_points;
     }
 
-    public List<GamificationActivity> getGamification_activities() {
-        return gamification_activities;
+    public Set<Activity> getActivities() {
+        return activities;
     }
 
-    public void setGamification_activities(List<GamificationActivity> gamification_activities) {
-        this.gamification_activities = gamification_activities;
-    }    
-    
+    public void setActivities(Set<Activity> activities) {
+        this.activities = activities;
+    }
 }

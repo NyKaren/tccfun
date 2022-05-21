@@ -1,15 +1,6 @@
 package com.nykaren.springboot.springboot.modal;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -37,16 +28,24 @@ public class Activity {
     @NotNull
     private Boolean activity_status; //In the mysql, TINYINT(1)
 
-	@Column
-    @OneToMany(mappedBy = "gamification_activity_activity")
-    private List<GamificationActivity> gamification_activities = new ArrayList<>();
+    public Activity() { }
+
+    public Activity(String activity_description) {
+        this.activity_description = activity_description;
+    }
+
+    public Activity(Integer activity_id, String activity_description) {
+        this.activity_id = activity_id;
+        this.activity_description = activity_description;
+    }
+
+    public Activity(Integer activity_id) {
+        this.activity_id = activity_id;
+    }
 
     @Override
     public String toString() {
-        return "Activity [activity_description=" + activity_description + ", activity_id=" + activity_id
-                + ", activity_level=" + activity_level + ", activity_points=" + activity_points + ", activity_status="
-                + activity_status + ", gamification_activities="
-                + gamification_activities+ "]";
+        return this.activity_description;
     }
 
     public Integer getActivity_id() {
@@ -88,13 +87,5 @@ public class Activity {
     public void setActivity_status(Boolean activity_status) {
         this.activity_status = activity_status;
     }
-
-    public List<GamificationActivity> getGamification_activities() {
-        return gamification_activities;
-    }
-
-    public void setGamification_activities(List<GamificationActivity> gamification_activities) {
-        this.gamification_activities = gamification_activities;
-    }    
     
 }
