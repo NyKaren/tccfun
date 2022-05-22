@@ -1,7 +1,6 @@
 package com.nykaren.springboot.springboot.modal;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,20 +10,16 @@ public class Gamification {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private Integer gamification_id;
 
     @OneToOne
     private User gamification_user;
     //private Integer gamification_user_id; //id from the user on other table
-    //Is it really a column?
     
-    @Column
-    @NotNull
+    @Column(nullable = false, columnDefinition = "varchar(50) default 'L1'")
     private String gamification_level;
     
-    @Column
-    @NotNull
+    @Column(nullable = false, columnDefinition = "INT default 0")
     private Integer gamification_points;
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -37,6 +32,33 @@ public class Gamification {
 
     public void addActivity(Activity activity) {
         this.activities.add(activity);
+    }
+
+    //gamification_user
+    public Gamification() { }
+
+    public Gamification(String gamification_level) {
+        this.gamification_level = gamification_level;
+    }
+
+    public Gamification(Integer gamification_id, String gamification_level) {
+        this.gamification_id = gamification_id;
+        this.gamification_level = gamification_level;
+    }
+
+    public Gamification(Integer gamification_id) {
+        this.gamification_id = gamification_id;
+    }
+
+    public Gamification(Integer gamification_id, Integer gamification_points) {
+        this.gamification_id = gamification_id;
+        this.gamification_points = gamification_points;
+    }
+
+    public Gamification(Integer gamification_id, String gamification_level, Integer gamification_points) {
+        this.gamification_id = gamification_id;
+        this.gamification_level = gamification_level;
+        this.gamification_points = gamification_points;
     }
 
     @Override

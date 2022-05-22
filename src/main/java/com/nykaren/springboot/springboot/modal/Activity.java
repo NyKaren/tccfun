@@ -9,19 +9,15 @@ public class Activity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private Integer activity_id;
     
-    @Column
-    @NotNull
+    @Column(nullable = false, unique = true, length = 255)
     private String activity_description;
     
-    @Column
-    @NotNull
+    @Column(nullable = false)
     private String activity_level;
     
-    @Column
-    @NotNull
+    @Column(nullable = false)
     private Integer activity_points;
 
 	@Column(columnDefinition = "TINYINT(1) default 1")
