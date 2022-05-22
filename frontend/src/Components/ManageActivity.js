@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function AddUser() {
+export default function ManageActivity() {
   const classes = useStyles();
   const [firstLoad, setLoad] = React.useState(true);
 
@@ -188,12 +188,12 @@ export default function AddUser() {
               <Link to="/userTableView">Ver Usuários</Link>
             </Grid>
           </Grid>
-
-          <Grid container justify="center">
-            <Grid item>
-              <Link to="/manageActivity">Gerenciar Atividades</Link>
-            </Grid>
-          </Grid>
+          <Link className={classes.link} to="/">
+            {" "}
+            <Typography align="left">
+              &#x2190; Retornar para Adicionar Usuário
+            </Typography>{" "}
+          </Link>
         </form>
         <Typography style={{ margin: 7 }} variant="body1">
           Status: {message}

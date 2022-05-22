@@ -36,6 +36,20 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDial
 ```
 
 #### TODO
+Add in the POM
+```sh
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+```
+
+See th5 5 and after on https://www.codejava.net/frameworks/spring-boot/spring-boot-security-authentication-with-jpa-hibernate-and-mysql
+    https://www.codejava.net/frameworks/spring-boot/spring-security-add-roles-to-user-examples
+    http://websystique.com/spring-security/spring-security-4-hibernate-annotation-example/
+    http://websystique.com/spring-security/spring-security-4-hibernate-role-based-login-example/
+    https://www.google.com/search?q=user+role+hibernate+register+security+example&ei=FC6JYsjMCe-E1sQP_r2awA8&ved=0ahUKEwjIpuyam_H3AhVvgpUCHf6eBvgQ4dUDCA4&uact=5&oq=user+role+hibernate+register+security+example&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsANKBAhBGABKBAhGGABQwAtYqjRghTtoAnABeACAAdUBiAGJGpIBBTAuOC45mAEAoAEByAEIwAEB&sclient=gws-wiz
+
 Remove &allowPublicKeyRetrieval=true and add an auth       
   See: https://dev.mysql.com/doc/refman/8.0/en/windows-pluggable-authentication.html       
   Error: https://stackoverflow.com/questions/57416600/connection-spring-boot-mysql-public-key-retrieval-is-not-allowed
