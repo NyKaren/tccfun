@@ -47,7 +47,7 @@ public class UserRepositoryTests {
         user.setUser_last_name("Kumar");
         //user.setUser_created_by(new Date("1998-04-02T21:11:54"));
         user.setUser_created_by(currentLocalDate);
-        user.setUser_terminated_by(null);
+        //user.setUser_terminated_by(null);
         user.setUser_status(true);
 
         repoUserDAOImp.save(user);
