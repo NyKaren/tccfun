@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {makeStyles} from "@material-ui/core/styles";
-import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles(theme => ({
     table: {
