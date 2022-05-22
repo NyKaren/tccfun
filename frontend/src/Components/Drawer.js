@@ -44,7 +44,7 @@ function DrawerComponent() {
                     </ListItem>
                     <ListItem onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Link to="/userTableView" className={classes.link}>Ver Usuários</Link>
+                            <Link to="/editUser" className={classes.link}>Editar Perfil</Link>
                         </ListItemText>
                     </ListItem>
                     <ListItem onClick={() => setOpenDrawer(false)}>

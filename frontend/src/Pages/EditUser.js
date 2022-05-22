@@ -8,7 +8,6 @@ import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import GroupIcon from "@material-ui/icons/Group";
 import React from "react";
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -35,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ManageActivity() {
+export default function EditUser() {
   const classes = useStyles();
   const [firstLoad, setLoad] = React.useState(true);
 
@@ -94,14 +93,14 @@ export default function ManageActivity() {
   }
 
   return (
-    <Container component="main" maxWidth="xs">
+  <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <GroupIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Gerenciar Atividades do Aluno
+          Editar Perfil
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -182,12 +181,6 @@ export default function ManageActivity() {
           >
             Salvar
           </Button>
-
-          <Grid container justify="center">
-            <Grid item>
-              <Link to="/activityTableView">Ver Atividades</Link>
-            </Grid>
-          </Grid>
         </form>
         <Typography style={{ margin: 7 }} variant="body1">
           Status: {message}

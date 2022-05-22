@@ -55,8 +55,8 @@ function Navbar() {
                         <Link to="/addUser" className={classes.link}>
                             Adicionar Usuário
                         </Link>
-                        <Link to="/userTableView" className={classes.link}>
-                            Ver Usuários
+                        <Link to="/editUser" className={classes.link}>
+                            Editar Perfil
                         </Link>
                         <Link to="/logout" className={classes.link}>
                             Logout
