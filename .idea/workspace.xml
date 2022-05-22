@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31e6b441-4d2f-40e4-8dc2-63826f6556b7" name="Default Changelist" comment="" />
+    <list default="true" id="31e6b441-4d2f-40e4-8dc2-63826f6556b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/RoleRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UserRepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/Role.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -152,14 +159,71 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\karen\Documents\sistemas\tccfun\frontend\src\Pages" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="java" />
+      <recent name="com.nykaren.springboot.springboot" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="tccfun-endpoints | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/tccfun-endpoints.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
+  <component name="RunManager" selected="JUnit.UserRepositoryTests">
+    <configuration name="RoleRepositoryTests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tccfun" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RoleRepositoryTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoleRepositoryTests (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tccfun" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RoleRepositoryTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoleRepositoryTests.testCreateRoles (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tccfun" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RoleRepositoryTests" />
+      <option name="METHOD_NAME" value="testCreateRoles" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tccfun" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nykaren.springboot.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nykaren.springboot.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.nykaren.springboot.springboot.SpringbootApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tccfun" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserRepositoryTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.tccfun-endpoints | #1" />
+        <item itemvalue="JUnit.UserRepositoryTests" />
+        <item itemvalue="JUnit.RoleRepositoryTests (1)" />
+        <item itemvalue="JUnit.SpringbootApplicationTests" />
+        <item itemvalue="JUnit.RoleRepositoryTests (2)" />
+        <item itemvalue="JUnit.RoleRepositoryTests.testCreateRoles (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +239,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653142022871</updated>
       <workItem from="1653147431126" duration="1169000" />
-      <workItem from="1653148813803" duration="48600000" />
+      <workItem from="1653148813803" duration="61570000" />
     </task>
     <servers />
   </component>
@@ -211,6 +275,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/dao/UserDAOImp.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

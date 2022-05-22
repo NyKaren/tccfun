@@ -20,11 +20,13 @@ public class Role {
 
     public Role(String role_description) {
         this.role_description = role_description;
+        this.role_status = true;
     }
 
     public Role(Integer role_id, String role_description) {
         this.role_id = role_id;
         this.role_description = role_description;
+        this.role_status = true;
     }
 
     public Role(Integer role_id) {
