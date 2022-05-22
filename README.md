@@ -36,25 +36,37 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDial
 ```
 
 #### TODO
-Add in the POM
+* Fix Add User to work properly
+  * Create User UnitTest
+  * Fix the Add User page to create user with Role ("Administrador" or "Aluno"")
+  * Fix the User API to create with Gamification (points = 0, level = "L1")
+  * Fix the Add User page to create with Gamification (points = 0, level = "L1")
+  * Fix the Add User page to get success message when adding a new user
+* Create/discover how to edit one User by id
+  * Get done the edit profile page
+* Create/discover how to add activity to an user>gamification
+    * Get done the API to add an activity to an user
+    * Get done the Manage Activity page
+    * Check if the View Activities from an user page is working properly
+* Add in the POM the Security dependency and discover how it works. It brings a Login page
 ```sh
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 ```
+*    * Get done the Logout (API and on the frontend)
 
-See th5 5 and after on https://www.codejava.net/frameworks/spring-boot/spring-boot-security-authentication-with-jpa-hibernate-and-mysql
+
+
+
+* See the 5 and after on https://www.codejava.net/frameworks/spring-boot/spring-boot-security-authentication-with-jpa-hibernate-and-mysql
     https://www.codejava.net/frameworks/spring-boot/spring-security-add-roles-to-user-examples
     http://websystique.com/spring-security/spring-security-4-hibernate-annotation-example/
     http://websystique.com/spring-security/spring-security-4-hibernate-role-based-login-example/
     https://www.google.com/search?q=user+role+hibernate+register+security+example&ei=FC6JYsjMCe-E1sQP_r2awA8&ved=0ahUKEwjIpuyam_H3AhVvgpUCHf6eBvgQ4dUDCA4&uact=5&oq=user+role+hibernate+register+security+example&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsANKBAhBGABKBAhGGABQwAtYqjRghTtoAnABeACAAdUBiAGJGpIBBTAuOC45mAEAoAEByAEIwAEB&sclient=gws-wiz
 
-Remove &allowPublicKeyRetrieval=true and add an auth       
-  See: https://dev.mysql.com/doc/refman/8.0/en/windows-pluggable-authentication.html       
-  Error: https://stackoverflow.com/questions/57416600/connection-spring-boot-mysql-public-key-retrieval-is-not-allowed
-
-Add Login Authentication on SpringBoot
+* Add Login Authentication on SpringBoot
  See https://www.codejava.net/frameworks/spring-boot/user-registration-and-login-tutorial
  See https://spring.io/guides/gs/securing-web/
  See https://www.baeldung.com/registration-with-spring-mvc-and-spring-security
@@ -65,7 +77,7 @@ Add Login Authentication on SpringBoot
  See https://o7planning.org/11655/create-a-user-registration-application-with-spring-boot-spring-form-validation
  See https://www.youtube.com/watch?v=aRLoSDOlU3w
 
-Add Login Authentication on React
+* Add Login Authentication on React
  See https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications
  See https://www.baeldung.com/spring-security-login-react
  See https://www.bezkoder.com/react-hooks-redux-login-registration-example/
@@ -76,7 +88,11 @@ Add Login Authentication on React
  See https://www.youtube.com/watch?v=juUaJpMd2LE
  See https://stormpath.com/blog/spring-boot-stormpath-react-sdk
 
-Create the logging  
+* Remove &allowPublicKeyRetrieval=true and add an auth       
+  See: https://dev.mysql.com/doc/refman/8.0/en/windows-pluggable-authentication.html       
+  Error: https://stackoverflow.com/questions/57416600/connection-spring-boot-mysql-public-key-retrieval-is-not-allowed
+
+* Create the logging  
   Log4J is an extremely popular open-sources library used in Java to manage application logging. It is an extremely popular library among Java developers because of how simple it makes logging in Java. 
   See https://mukundmadhav.com/log4j-vulnerability-fix/#more-199
   See https://www.baeldung.com/spring-boot-logging
