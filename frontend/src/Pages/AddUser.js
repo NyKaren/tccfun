@@ -188,12 +188,6 @@ export default function AddUser() {
               <Link to="/userTableView">Ver Usuários</Link>
             </Grid>
           </Grid>
-
-          <Grid container justify="center">
-            <Grid item>
-              <Link to="/manageActivity">Gerenciar Atividades</Link>
-            </Grid>
-          </Grid>
         </form>
         <Typography style={{ margin: 7 }} variant="body1">
           Status: {message}

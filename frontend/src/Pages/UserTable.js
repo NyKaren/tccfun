@@ -106,7 +106,7 @@ export default function SimpleTable() {
           </Table>
         </TableContainer>
       )}
-      <Link className={classes.link} to="/">
+      <Link className={classes.link} to="/addUser">
         {" "}
         <Typography align="left">
           &#x2190; Retornar para Adicionar Usuário
