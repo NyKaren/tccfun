@@ -1,16 +1,21 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import AddUser from "./Components/AddUser";
-import UserTable from "./Components/UserTable";
-import ManageActivity from "./Components/ManageActivity";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AddUser from "./Pages/AddUser";
+import UserTable from "./Pages/UserTable";
+import ManageActivity from "./Pages/ManageActivity";
+import NavBar from "./Components/NavBar";
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Route exact path="/" component={AddUser} />
-        <Route exact path="/userTableView" component={UserTable} />
-          <Route exact path="/manageActivity" component={ManageActivity} />
+          <NavBar />
+          <Switch>
+              <Route exact path="/" component={ManageActivity} />
+              <Route path="/addUser" component={AddUser} />
+              <Route path="/userTableView" component={UserTable} />
+              <Route path="/logout" component={UserTable} />
+          </Switch>
       </Router>
     );
   }

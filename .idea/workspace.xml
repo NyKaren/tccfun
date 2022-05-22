@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31e6b441-4d2f-40e4-8dc2-63826f6556b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/Components/ManageActivity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Components/Drawer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Components/NavBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Pages/About.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Pages/Contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Pages/Faq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/Pages/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/AddUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/AddUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/AddUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/AddUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/ManageActivity.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/ManageActivity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/UserTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/UserTable.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +24,13 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -140,12 +152,16 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "settings.space",
     "spring.configuration.checksum": "8ed1ceaaaba60068087307ecdc573b29",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\karen\Documents\sistemas\tccfun\frontend\src\Components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\karen\Documents\sistemas\tccfun\frontend\src\Pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -170,7 +186,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653142022871</updated>
       <workItem from="1653147431126" duration="1169000" />
-      <workItem from="1653148813803" duration="23096000" />
+      <workItem from="1653148813803" duration="32870000" />
     </task>
     <servers />
   </component>

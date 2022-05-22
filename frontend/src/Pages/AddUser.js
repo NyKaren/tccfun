@@ -94,7 +94,7 @@ export default function AddUser() {
   }
 
   return (
-    <Container component="main" maxWidth="xs">
+  <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
