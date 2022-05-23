@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="31e6b441-4d2f-40e4-8dc2-63826f6556b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Pages/AddUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/AddUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserRepositoryTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +161,15 @@
       <recent name="com.nykaren.springboot.springboot" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserRepositoryTests">
+  <component name="RunManager" selected="JUnit.All in tccfun">
+    <configuration name="All in tccfun" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tccfun" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RoleRepositoryTests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tccfun" />
       <option name="PACKAGE_NAME" value="" />
@@ -177,16 +184,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RoleRepositoryTests" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoleRepositoryTests.testCreateRoles (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tccfun" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RoleRepositoryTests" />
-      <option name="METHOD_NAME" value="testCreateRoles" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -217,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in tccfun" />
+        <item itemvalue="JUnit.SpringbootApplicationTests" />
         <item itemvalue="JUnit.UserRepositoryTests" />
         <item itemvalue="JUnit.RoleRepositoryTests (1)" />
-        <item itemvalue="JUnit.SpringbootApplicationTests" />
         <item itemvalue="JUnit.RoleRepositoryTests (2)" />
-        <item itemvalue="JUnit.RoleRepositoryTests.testCreateRoles (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +234,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653142022871</updated>
       <workItem from="1653147431126" duration="1169000" />
-      <workItem from="1653148813803" duration="70477000" />
+      <workItem from="1653148813803" duration="71128000" />
     </task>
     <servers />
   </component>

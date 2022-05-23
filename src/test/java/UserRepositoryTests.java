@@ -1,5 +1,6 @@
 import com.nykaren.springboot.springboot.dao.RoleDAOImp;
 import com.nykaren.springboot.springboot.dao.UserDAOImp;
+import com.nykaren.springboot.springboot.modal.Role;
 import com.nykaren.springboot.springboot.modal.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,5 +57,28 @@ public class UserRepositoryTests {
 
         assertThat(user.getUser_email()).isEqualTo(existUser.getUser_email());
 
+    }
+
+    @Test
+    public void testAddRoleToNewUser() {
+//        Role roleAdmin = repoRoleDAOImp.findByName("Administrador");
+        Role roleAdmin = repoRoleDAOImp.get(2);
+
+        User user = new User();
+        user.setUser_email("mikes.gates@gmail.com");
+        user.setUser_username("MikeGates");
+        user.setUser_password("mike2020");
+        user.setUser_first_name("Mike");
+        user.setUser_last_name("Gates");
+        //user.setUser_created_by(new Date("1998-04-02T21:11:54"));
+        user.setUser_created_by(currentLocalDate);
+        //user.setUser_terminated_by(null);
+        user.setUser_status(true);
+        user.addRole(roleAdmin);
+
+        repoUserDAOImp.save(user);
+        User existUser = entityManager.find(User.class, user.getUser_id());
+
+        assertThat(existUser.getRoles().size()).isEqualTo(1);
     }
 }
