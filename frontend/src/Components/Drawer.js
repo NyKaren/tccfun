@@ -22,7 +22,7 @@ const useStyles = makeStyles(()=>({
     }
 }));
 
-function DrawerComponent() {
+export default function DrawerComponent() {
     const classes = useStyles();
     const [openDrawer, setOpenDrawer] = useState(false);
     return (
@@ -60,4 +60,3 @@ function DrawerComponent() {
         </>
     );
 }
-export default DrawerComponent;

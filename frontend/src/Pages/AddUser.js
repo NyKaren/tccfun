@@ -44,7 +44,10 @@ export default function AddUser() {
   const [user_email, setEmail] = React.useState("");
   const [user_first_name, setFirst_name] = React.useState("");
   const [user_last_name, setLast_name] = React.useState("");
-  const [user_created_by, setUser_created_by] = React.useState(new Date("1998-04-02T21:11:54"));
+ // const [user_created_by, setUser_created_by] = React.useState(new Date("1998-04-02T21:11:54"));
+  const todayDate = new window.Date();
+  let tDate = todayDate.toJSON(); //https://www.w3schools.com/jsref/jsref_tojson.asp
+  const [user_created_by, setUser_created_by] = React.useState(tDate);
   const [user_terminated_by, setUser_terminated_by] = React.useState("");
   const [user_status, setUser_status] = React.useState(true);
 
@@ -83,7 +86,8 @@ export default function AddUser() {
     setEmail("");
     setFirst_name("");
     setLast_name("");
-    setUser_created_by(new Date("1998-04-02T21:11:54"));
+    // setUser_created_by(new Date("1998-04-02T21:11:54"));
+    setUser_created_by("");
     setUser_terminated_by(null);
     setUser_status(true);
   };
