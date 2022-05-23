@@ -35,10 +35,13 @@ spring.jpa.hibernate.naming.implicit-strategy = org.hibernate.cfg.ImprovedNaming
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDialect
 ```
 
+//Test in 2 browsers: https://www.lambdatest.com/blog/junit-5-vs-testng/
+
 #### TODO
 * Fix Add User to work properly
-  * Create User UnitTest
   * Fix the Add User page to create user with Role ("Administrador" or "Aluno"")
+      * Number 4: https://www.codejava.net/frameworks/spring-boot/spring-security-add-roles-to-user-examples
+      * Number 5: https://www.codejava.net/frameworks/spring-boot/spring-boot-security-authentication-with-jpa-hibernate-and-mysql
   * Fix the User API to create with Gamification (points = 0, level = "L1")
   * Fix the Add User page to create with Gamification (points = 0, level = "L1")
   * Fix the Add User page to get success message when adding a new user
@@ -47,6 +50,12 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDial
 * Create/discover how to add activity to an user>gamification
     * Get done the API to add an activity to an user
     * Get done the Manage Activity page
+      * Use switch
+      * https://github.com/mui/material-ui
+      * https://github.com/mui/material-ui/tree/master/examples
+      * https://v4.mui.com/pt/components/switches/
+      * https://v4.mui.com/pt/components/switches/#when-to-use
+      * https://uxplanet.org/checkbox-vs-toggle-switch-7fc6e83f10b8
     * Check if the View Activities from an user page is working properly
 * Add in the POM the Security dependency and discover how it works. It brings a Login page
 ```sh

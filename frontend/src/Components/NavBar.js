@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function Navbar() {
+export default function Navbar() {
     const classes = useStyles();
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -67,4 +67,3 @@ function Navbar() {
         </AppBar>
     );
 }
-export default Navbar;
