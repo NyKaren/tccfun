@@ -50,7 +50,8 @@ public class User {
       this.roles.add(role);
     }
 
-  @OneToOne(mappedBy="gamification_user")
+  @OneToOne(cascade=CascadeType.ALL,orphanRemoval = true)
+  @JoinColumn(name="gamification_id")
   private Gamification gamification;
   //On Gamification table: private Integer gamification_user_id; //id from the user on other table
 

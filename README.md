@@ -39,13 +39,11 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDial
 
 #### TODO
 * Fix Add User to work properly
-  * Fix the Add User page to create user with Role ("Administrador" or "Aluno"")
+  * Fix the User to create with Gamification (points = 0, level = "L1")
       * Number 4: https://www.codejava.net/frameworks/spring-boot/spring-security-add-roles-to-user-examples
       * Number 5: https://www.codejava.net/frameworks/spring-boot/spring-boot-security-authentication-with-jpa-hibernate-and-mysql
-  * Fix the User API to create with Gamification (points = 0, level = "L1")
-  * Fix the Add User page to create with Gamification (points = 0, level = "L1")
-  * Fix the Add User page to get success message when adding a new user
-* Create/discover how to edit one User by id
+  * Fix the Add User page to get success message when adding a new user (may the previous steps get it done)
+* Create/discover how to edit one User by id (using the post method on service rs) (It isn't a priority)
   * Get done the edit profile page
 * Create/discover how to add activity to an user>gamification
     * Get done the API to add an activity to an user

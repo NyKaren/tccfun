@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31e6b441-4d2f-40e4-8dc2-63826f6556b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RoleRepositoryTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserRepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Pages/AddUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/AddUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/Gamification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/Gamification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RepositoryTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tccfun.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tccfun.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +51,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="14" />
@@ -139,18 +145,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/karen/Documents/sistemas/tccfun/frontend/src/Pages",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.space",
-    "spring.configuration.checksum": "8ed1ceaaaba60068087307ecdc573b29",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/karen/Documents/sistemas/tccfun/frontend/src/Pages&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.space&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;8ed1ceaaaba60068087307ecdc573b29&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\karen\Documents\sistemas\tccfun\frontend\src\Pages" />
@@ -213,6 +219,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tccfun" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nykaren.springboot.springboot.SpringbootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in tccfun" />
@@ -235,7 +248,8 @@
       <option name="presentableId" value="Default" />
       <updated>1653142022871</updated>
       <workItem from="1653147431126" duration="1169000" />
-      <workItem from="1653148813803" duration="79687000" />
+      <workItem from="1653148813803" duration="81571000" />
+      <workItem from="1653302137835" duration="5589000" />
     </task>
     <servers />
   </component>

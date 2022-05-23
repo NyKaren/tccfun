@@ -12,7 +12,7 @@ public class Gamification {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer gamification_id;
 
-    @OneToOne
+    @OneToOne(cascade=CascadeType.ALL,mappedBy="gamification")
     private User gamification_user;
     //private Integer gamification_user_id; //id from the user on other table
     
@@ -57,6 +57,11 @@ public class Gamification {
 
     public Gamification(Integer gamification_id, String gamification_level, Integer gamification_points) {
         this.gamification_id = gamification_id;
+        this.gamification_level = gamification_level;
+        this.gamification_points = gamification_points;
+    }
+
+    public Gamification(String gamification_level, Integer gamification_points) {
         this.gamification_level = gamification_level;
         this.gamification_points = gamification_points;
     }

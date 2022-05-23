@@ -1,5 +1,6 @@
 import com.nykaren.springboot.springboot.dao.RoleDAOImp;
 import com.nykaren.springboot.springboot.dao.UserDAOImp;
+import com.nykaren.springboot.springboot.modal.Gamification;
 import com.nykaren.springboot.springboot.modal.Role;
 import com.nykaren.springboot.springboot.modal.User;
 import org.junit.jupiter.api.MethodOrderer;
@@ -116,5 +117,32 @@ public class RepositoryTests {
         User existUser = entityManager.find(User.class, user.getUser_id());
 
         assertThat(existUser.getRoles().size()).isEqualTo(2);
+    }
+
+    @Test
+    @Order(5)
+    public void testAddGamificationToNewUser() {
+        Role roleStudent = repoRoleDAOImp.get(1);
+
+        User user = new User();
+        user.setUser_email("ethan.sanders@gmail.com");
+        user.setUser_username("EthanSanders");
+        user.setUser_password("ethan43g7");
+        user.setUser_first_name("Ethan");
+        user.setUser_last_name("Sanders");
+        user.setUser_created_by(currentLocalDate);
+        user.setUser_status(true);
+        user.addRole(roleStudent);
+        System.out.println("Role student: "+roleStudent);
+
+        Gamification userGamification = new Gamification("L1",0);
+        user.setGamification(userGamification);
+        repoUserDAOImp.save(user);
+        User existUser = entityManager.find(User.class, user.getUser_id());
+        System.out.println("ExistUser: "+existUser);
+
+        assertThat(user.getGamification()).isEqualTo(existUser.getGamification());
+        User existUserAfterSave = entityManager.find(User.class, user.getUser_id());
+        System.out.println("ExistUser after Save: "+existUserAfterSave);
     }
 }
