@@ -38,7 +38,10 @@ public class User {
 	@Column(nullable = false, columnDefinition = "TINYINT(1) default 1")
     private Boolean user_status;  //In the mysql, TINYINT(1)
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
     @JoinTable(
             name = "tb_user_role",
             joinColumns = @JoinColumn(name = "user_id"),
@@ -50,7 +53,9 @@ public class User {
       this.roles.add(role);
     }
 
-  @OneToOne(cascade=CascadeType.ALL,orphanRemoval = true)
+  @OneToOne(orphanRemoval = true, cascade = {
+          CascadeType.PERSIST
+  })
   @JoinColumn(name="gamification_id")
   private Gamification gamification;
   //On Gamification table: private Integer gamification_user_id; //id from the user on other table

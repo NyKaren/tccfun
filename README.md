@@ -38,11 +38,9 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDial
 //Test in 2 browsers: https://www.lambdatest.com/blog/junit-5-vs-testng/
 
 #### TODO
-* Fix Add User to work properly
-  * Fix the User to create with Gamification (points = 0, level = "L1")
-      * Number 4: https://www.codejava.net/frameworks/spring-boot/spring-security-add-roles-to-user-examples
-      * Number 5: https://www.codejava.net/frameworks/spring-boot/spring-boot-security-authentication-with-jpa-hibernate-and-mysql
+* Fix Add User to work properly (It isn't a priority)
   * Fix the Add User page to get success message when adding a new user (may the previous steps get it done)
+    * Why is the body.id undefined?
 * Create/discover how to edit one User by id (using the post method on service rs) (It isn't a priority)
   * Get done the edit profile page
 * Create/discover how to add activity to an user>gamification
@@ -62,6 +60,8 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDial
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 ```
+* Number 4: https://www.codejava.net/frameworks/spring-boot/spring-security-add-roles-to-user-examples
+* Number 5: https://www.codejava.net/frameworks/spring-boot/spring-boot-security-authentication-with-jpa-hibernate-and-mysql
 *    * Get done the Logout (API and on the frontend)
 
 

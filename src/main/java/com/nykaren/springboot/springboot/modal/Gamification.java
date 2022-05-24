@@ -11,10 +11,6 @@ public class Gamification {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer gamification_id;
-
-    @OneToOne(cascade=CascadeType.ALL,mappedBy="gamification")
-    private User gamification_user;
-    //private Integer gamification_user_id; //id from the user on other table
     
     @Column(nullable = false, columnDefinition = "varchar(50) default 'L1'")
     private String gamification_level;
@@ -22,7 +18,10 @@ public class Gamification {
     @Column(nullable = false, columnDefinition = "INT default 0")
     private Integer gamification_points;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
     @JoinTable(
             name = "tb_gamification_activity",
             joinColumns = @JoinColumn(name = "gamification_id"),
@@ -70,7 +69,6 @@ public class Gamification {
     public String toString() {
         return "Gamification{" +
                 "gamification_id=" + gamification_id +
-                ", gamification_user=" + gamification_user +
                 ", gamification_level='" + gamification_level + '\'' +
                 ", gamification_points=" + gamification_points +
                 ", activities=" + activities +
@@ -83,14 +81,6 @@ public class Gamification {
 
     public void setGamification_id(Integer gamification_id) {
         this.gamification_id = gamification_id;
-    }
-
-    public User getGamification_user() {
-        return gamification_user;
-    }
-
-    public void setGamification_user(User gamification_user) {
-        this.gamification_user = gamification_user;
     }
 
     public String getGamification_level() {
