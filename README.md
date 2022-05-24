@@ -41,10 +41,15 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDial
 * Fix Add User to work properly (It isn't a priority)
   * Fix the Add User page to get success message when adding a new user (may the previous steps get it done)
     * Why is the body.id undefined?
+  * Fix the result of the persistence on the tb_role. Should it to be @ManyToOne?
+    * Let the role_description to be like below and the tb_user_role should call or "Aluno" or "Administrador" that each one have the role_id
+    ```sh 
+     unique = true
+    ```
 * Create/discover how to edit one User by id (using the post method on service rs) (It isn't a priority)
   * Get done the edit profile page
 * Create/discover how to add activity to an user>gamification
-    * Get done the API to add an activity to an user
+    * Get done the API to add an activity to a gamification
     * Get done the Manage Activity page
       * Use switch
       * https://github.com/mui/material-ui

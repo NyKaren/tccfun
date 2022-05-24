@@ -50,7 +50,7 @@ export default function AddUser() {
   const [user_created_by, setUser_created_by] = React.useState(tDate);
   const [user_terminated_by, setUser_terminated_by] = React.useState("");
   const [user_status, setUser_status] = React.useState(true);
-  const [roles, addRole] = React.useState(["Aluno"]);
+  const [role, setRole] = React.useState("Aluno");
   const [gamification, setGamification] = React.useState({gamification_level:"L1", gamification_points : 0});
 
   const handleUsernameChange = event => setUsername(event.target.value); 
@@ -81,19 +81,17 @@ export default function AddUser() {
   }
 
   const handleSubmit = variables => {
-    const toInput = { user_username, user_password, user_email, user_first_name, user_last_name, user_created_by, user_terminated_by, user_status, roles, gamification };
+    const toInput = { user_username, user_password, user_email, user_first_name, user_last_name, user_created_by, user_terminated_by, user_status, role, gamification };
     sampleFunc(toInput);
     setUsername("");
     setPassword("");
     setEmail("");
     setFirst_name("");
     setLast_name("");
-    // setUser_created_by(new Date("1998-04-02T21:11:54"));
     setUser_created_by("");
     setUser_terminated_by(null);
     setUser_status(true);
-    //TODO check if it works
-    addRole([]);
+    setRole("Aluno");
     setGamification({gamification_level:"L1", gamification_points : 0});
   };
 

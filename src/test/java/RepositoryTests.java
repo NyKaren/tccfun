@@ -60,6 +60,7 @@ public class RepositoryTests {
     @Order(2)
     public void testCreateUser() {
         User user = new User();
+
         user.setUser_email("ravikumar@gmail.com");
         user.setUser_username("ravikumar");
         user.setUser_password("ravi2020");
@@ -67,21 +68,18 @@ public class RepositoryTests {
         user.setUser_last_name("Kumar");
         user.setUser_created_by(currentLocalDate);
         user.setUser_status(true);
-
         repoUserDAOImp.save(user);
 
         User existUser = entityManager.find(User.class, user.getUser_id());
-
         assertThat(user.getUser_email()).isEqualTo(existUser.getUser_email());
-
     }
 
     @Test
     @Order(3)
     public void testAddRoleToNewUser() {
         Role roleAdmin = repoRoleDAOImp.get(2);
-
         User user = new User();
+
         user.setUser_email("mikes.gates@gmail.com");
         user.setUser_username("MikeGates");
         user.setUser_password("mike2020");
@@ -89,42 +87,33 @@ public class RepositoryTests {
         user.setUser_last_name("Gates");
         user.setUser_created_by(currentLocalDate);
         user.setUser_status(true);
-        user.addRole(roleAdmin);
-        System.out.println("Role admin: "+roleAdmin);
-
+        user.setRole(roleAdmin);
         repoUserDAOImp.save(user);
-        System.out.println("User: "+user);
-        User existUser = entityManager.find(User.class, user.getUser_id());
-        System.out.println("ExistUser: "+existUser);
 
-        assertThat(existUser.getRoles().size()).isEqualTo(1);
+        User existUser = entityManager.find(User.class, user.getUser_id());
+        assertThat(user.getRole()).isEqualTo(existUser.getRole());
     }
 
     @Test
     @Order(4)
     public void testAddRoleToExistingUser() {
         User user = repoUserDAOImp.get(1);
-        Role roleAdmin = repoRoleDAOImp.get(2);
         Role roleStudent = repoRoleDAOImp.get(1);
-        System.out.println("Role admin: "+roleAdmin);
-        System.out.println("Role student: "+roleStudent);
 
-        user.addRole(roleStudent);
-        user.addRole(roleAdmin);
-
+        user.setRole(roleStudent);
         repoUserDAOImp.save(user);
-        System.out.println("User: "+user);
-        User existUser = entityManager.find(User.class, user.getUser_id());
 
-        assertThat(existUser.getRoles().size()).isEqualTo(2);
+        User existUser = entityManager.find(User.class, user.getUser_id());
+        assertThat(user.getRole()).isEqualTo(existUser.getRole());
     }
 
     @Test
     @Order(5)
     public void testAddGamificationToNewUser() {
         Role roleStudent = repoRoleDAOImp.get(1);
-
         User user = new User();
+        Gamification userGamification = new Gamification("L1",0);
+
         user.setUser_email("ethan.sanders@gmail.com");
         user.setUser_username("EthanSanders");
         user.setUser_password("ethan43g7");
@@ -132,17 +121,11 @@ public class RepositoryTests {
         user.setUser_last_name("Sanders");
         user.setUser_created_by(currentLocalDate);
         user.setUser_status(true);
-        user.addRole(roleStudent);
-        System.out.println("Role student: "+roleStudent);
-
-        Gamification userGamification = new Gamification("L1",0);
+        user.setRole(roleStudent);
         user.setGamification(userGamification);
         repoUserDAOImp.save(user);
-        User existUser = entityManager.find(User.class, user.getUser_id());
-        System.out.println("ExistUser: "+existUser);
 
+        User existUser = entityManager.find(User.class, user.getUser_id());
         assertThat(user.getGamification()).isEqualTo(existUser.getGamification());
-        User existUserAfterSave = entityManager.find(User.class, user.getUser_id());
-        System.out.println("ExistUser after Save: "+existUserAfterSave);
     }
 }

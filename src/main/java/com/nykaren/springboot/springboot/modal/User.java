@@ -2,8 +2,6 @@ package com.nykaren.springboot.springboot.modal;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
 
 
 @Entity
@@ -38,7 +36,7 @@ public class User {
 	@Column(nullable = false, columnDefinition = "TINYINT(1) default 1")
     private Boolean user_status;  //In the mysql, TINYINT(1)
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {
             CascadeType.PERSIST,
             CascadeType.MERGE
     })
@@ -47,18 +45,14 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
-    private Set<Role> roles = new HashSet<>();
+    private Role role;
 
-    public void addRole(Role role) {
-      this.roles.add(role);
-    }
-
-  @OneToOne(orphanRemoval = true, cascade = {
-          CascadeType.PERSIST
-  })
-  @JoinColumn(name="gamification_id")
-  private Gamification gamification;
-  //On Gamification table: private Integer gamification_user_id; //id from the user on other table
+    @OneToOne(orphanRemoval = true, cascade = {
+            CascadeType.PERSIST
+    })
+    @JoinColumn(name="gamification_id")
+    private Gamification gamification;
+    //On Gamification table: private Integer gamification_user_id; //id from the user on other table
 
 
     @Override
@@ -73,7 +67,7 @@ public class User {
               ", user_created_by=" + user_created_by +
               ", user_terminated_by=" + user_terminated_by +
               ", user_status=" + user_status +
-              ", roles=" + roles +
+              ", role=" + role +
               ", gamification=" + gamification +
               '}';
     }
@@ -150,19 +144,19 @@ public class User {
       this.user_status = user_status;
     }
 
-    public Set<Role> getRoles() {
-      return roles;
+    public Role getRole() {
+      return role;
     }
 
-    public void setRoles(Set<Role> roles) {
-      this.roles = roles;
+    public void setRole(Role role) {
+      this.role = role;
     }
 
-  public Gamification getGamification() {
-    return gamification;
-  }
+    public Gamification getGamification() {
+      return gamification;
+    }
 
-  public void setGamification(Gamification gamification) {
-    this.gamification = gamification;
-  }
+    public void setGamification(Gamification gamification) {
+      this.gamification = gamification;
+    }
 }
