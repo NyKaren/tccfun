@@ -49,7 +49,6 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDial
 * Create/discover how to edit one User by id (using the post method on service rs) (It isn't a priority)
   * Get done the edit profile page
 * Create/discover how to add activity to an user>gamification
-    * Get done the API to add an activity to a gamification
     * Get done the Manage Activity page
       * Use switch
       * https://github.com/mui/material-ui
