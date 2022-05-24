@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="31e6b441-4d2f-40e4-8dc2-63826f6556b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Pages/AddUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/AddUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/Activity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/Gamification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/Gamification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RepositoryTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +41,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -246,7 +245,7 @@
       <updated>1653142022871</updated>
       <workItem from="1653147431126" duration="1169000" />
       <workItem from="1653148813803" duration="81571000" />
-      <workItem from="1653302137835" duration="23166000" />
+      <workItem from="1653302137835" duration="25417000" />
     </task>
     <servers />
   </component>

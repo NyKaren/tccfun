@@ -1,5 +1,6 @@
 import com.nykaren.springboot.springboot.dao.RoleDAOImp;
 import com.nykaren.springboot.springboot.dao.UserDAOImp;
+import com.nykaren.springboot.springboot.modal.Activity;
 import com.nykaren.springboot.springboot.modal.Gamification;
 import com.nykaren.springboot.springboot.modal.Role;
 import com.nykaren.springboot.springboot.modal.User;
@@ -112,7 +113,7 @@ public class RepositoryTests {
     public void testAddGamificationToNewUser() {
         Role roleStudent = repoRoleDAOImp.get(1);
         User user = new User();
-        Gamification userGamification = new Gamification("L1",0);
+        Gamification userGamification = new Gamification("L1", 0);
 
         user.setUser_email("ethan.sanders@gmail.com");
         user.setUser_username("EthanSanders");
@@ -122,6 +123,21 @@ public class RepositoryTests {
         user.setUser_created_by(currentLocalDate);
         user.setUser_status(true);
         user.setRole(roleStudent);
+        user.setGamification(userGamification);
+        repoUserDAOImp.save(user);
+
+        User existUser = entityManager.find(User.class, user.getUser_id());
+        assertThat(user.getGamification()).isEqualTo(existUser.getGamification());
+    }
+
+    @Test
+    @Order(6)
+    public void testAddActivityToExistingGamification() {
+        User user = repoUserDAOImp.get(3);
+        Gamification userGamification = user.getGamification();
+        Activity userActivity = new Activity("Mínimo de 67% da carga horária total das disciplinas obrigatórias do curso", "L1", 50);
+
+        userGamification.addActivity(userActivity);
         user.setGamification(userGamification);
         repoUserDAOImp.save(user);
 

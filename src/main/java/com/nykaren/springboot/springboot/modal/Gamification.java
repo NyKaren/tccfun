@@ -18,7 +18,7 @@ public class Gamification {
     @Column(nullable = false, columnDefinition = "INT default 0")
     private Integer gamification_points;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {
+    @OneToMany(fetch = FetchType.EAGER, cascade = {
             CascadeType.PERSIST,
             CascadeType.MERGE
     })
@@ -33,7 +33,6 @@ public class Gamification {
         this.activities.add(activity);
     }
 
-    //gamification_user
     public Gamification() { }
 
     public Gamification(String gamification_level) {

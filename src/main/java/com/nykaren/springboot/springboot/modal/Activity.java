@@ -1,7 +1,6 @@
 package com.nykaren.springboot.springboot.modal;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "tb_activity")
@@ -20,19 +19,24 @@ public class Activity {
     @Column(nullable = false)
     private Integer activity_points;
 
-	@Column(columnDefinition = "TINYINT(1) default 1")
-    @NotNull
+	@Column(nullable = false, columnDefinition = "TINYINT(1) default 1")
     private Boolean activity_status; //In the mysql, TINYINT(1)
 
     public Activity() { }
 
-    public Activity(String activity_description) {
+    public Activity(String activity_description, String activity_level, Integer activity_points) {
         this.activity_description = activity_description;
+        this.activity_level = activity_level;
+        this.activity_points = activity_points;
+        this.activity_status = true;
     }
 
-    public Activity(Integer activity_id, String activity_description) {
+    public Activity(Integer activity_id, String activity_description, String activity_level, Integer activity_points) {
         this.activity_id = activity_id;
         this.activity_description = activity_description;
+        this.activity_level = activity_level;
+        this.activity_points = activity_points;
+        this.activity_status = true;
     }
 
     public Activity(Integer activity_id) {
