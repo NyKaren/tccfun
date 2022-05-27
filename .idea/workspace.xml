@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="31e6b441-4d2f-40e4-8dc2-63826f6556b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/Drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/Drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/Components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Components/NavBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/Pages/ManageActivity.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Pages/ManageActivity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nykaren/springboot/springboot/modal/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RepositoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RepositoryTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +240,7 @@
       <workItem from="1653147431126" duration="1169000" />
       <workItem from="1653148813803" duration="81571000" />
       <workItem from="1653302137835" duration="51883000" />
-      <workItem from="1653582775476" duration="5831000" />
+      <workItem from="1653582775476" duration="9156000" />
     </task>
     <servers />
   </component>

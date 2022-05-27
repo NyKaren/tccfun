@@ -122,7 +122,7 @@ export default function ManageActivity() {
           <GroupIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Gerenciar Atividades do Aluno
+          Exterminador de TCC
         </Typography>
         <form className={classes.form} noValidate>
           <div style={{ display: "block", padding: 30 }}>

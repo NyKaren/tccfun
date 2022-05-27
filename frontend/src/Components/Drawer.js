@@ -34,7 +34,7 @@ export default function DrawerComponent() {
                 <List>
                     <ListItem onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Link to="/" className={classes.link}>Gerenciar Atividades</Link>
+                            <Link to="/" className={classes.link}>Exterminador de TCC</Link>
                         </ListItemText>
                     </ListItem>
                     <ListItem onClick={() => setOpenDrawer(false)}>

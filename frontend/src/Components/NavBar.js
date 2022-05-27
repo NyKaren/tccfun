@@ -50,7 +50,7 @@ export default function Navbar() {
                 ) : (
                     <div className={classes.navlinks}>
                         <Link to="/" className={classes.link}>
-                            Gerenciar Atividades
+                            Exterminador de TCC
                         </Link>
                         <Link to="/addUser" className={classes.link}>
                             Adicionar Usuário
