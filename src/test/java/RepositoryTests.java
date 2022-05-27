@@ -135,7 +135,7 @@ public class RepositoryTests {
     public void testAddActivityToExistingGamification() {
         User user = repoUserDAOImp.get(3);
         Gamification userGamification = user.getGamification();
-        Activity userActivity = new Activity("Mínimo de 67% da carga horária total das disciplinas obrigatórias do curso", "L1", 50);
+        Activity userActivity = new Activity("Mínimo de 67% da carga horária total das disciplinas obrigatórias do curso", "L1", 50, true);
 
         userGamification.addActivity(userActivity);
         user.setGamification(userGamification);

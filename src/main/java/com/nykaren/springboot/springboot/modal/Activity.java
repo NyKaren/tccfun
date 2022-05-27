@@ -24,11 +24,11 @@ public class Activity {
 
     public Activity() { }
 
-    public Activity(String activity_description, String activity_level, Integer activity_points) {
+    public Activity(String activity_description, String activity_level, Integer activity_points, Boolean activity_status) {
         this.activity_description = activity_description;
         this.activity_level = activity_level;
         this.activity_points = activity_points;
-        this.activity_status = true;
+        this.activity_status = activity_status;
     }
 
     public Activity(Integer activity_id, String activity_description, String activity_level, Integer activity_points) {

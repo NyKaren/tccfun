@@ -4,11 +4,16 @@ import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 import GroupIcon from "@material-ui/icons/Group";
 import React from "react";
 import { Link } from "react-router-dom";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Paper from "@material-ui/core/Paper";
+import Switch from "@material-ui/core/Switch";
+import Slide from "@material-ui/core/Slide";
+import TableRow from "@material-ui/core/TableRow";
+import TableCell from "@material-ui/core/TableCell";
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -38,27 +43,25 @@ const useStyles = makeStyles(theme => ({
 export default function ManageActivity() {
   const classes = useStyles();
   const [firstLoad, setLoad] = React.useState(true);
+  const [data, setUpdateData] = React.useState([]);
 
-  const [user_username, setUsername] = React.useState("");
-  const [user_password, setPassword] = React.useState("");
-  const [user_email, setEmail] = React.useState("");
-  const [user_first_name, setFirst_name] = React.useState("");
-  const [user_last_name, setLast_name] = React.useState("");
-  const [user_created_by, setUser_created_by] = React.useState(new Date("1998-04-02T21:11:54"));
-  const [user_terminated_by, setUser_terminated_by] = React.useState("");
-  const [user_status, setUser_status] = React.useState(true);
+  const [gamification, setGamification] = React.useState([]);
+  const [gamification_id, setGamification_id] = React.useState(0);
 
-  const handleUsernameChange = event => setUsername(event.target.value); 
-  const handlePasswordChange = event => setPassword(event.target.value); 
-  const handleEmailChange = event => setEmail(event.target.value); 
-  const handleFirst_nameChange = event => setFirst_name(event.target.value); 
-  const handleLast_nameChange = event => setLast_name(event.target.value);
- 
+
+  const [isTcc1MinimoDe67, setIsTcc1MinimoDe67] = React.useState(false);
+  const [isTcc1MinimoDe67Checked, setIsTcc1MinimoDe67Checked] = React.useState(false);
+
+    const [isTcc1CourseChecked, setIsTcc1CourseChecked] = React.useState(false);
+
+  const [isTcc1EscolherAreaDeInteresse, setIsTcc1EscolherAreaDeInteresse] = React.useState(false);
+  const [isTcc1EscolherAreaDeInteresseChecked, setIsTcc1EscolherAreaDeInteresseChecked] = React.useState(false);
+
   const [message, setMessage] = React.useState("Nenhum dado salvo nesta sessão.");
 
   async function sampleFunc(toInput) {
-    const response = await fetch("/api/user", {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
+    const response = await fetch("/api/gamification"+1, {
+      method: "PUT", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
       credentials: "same-origin", // include, *same-origin, omit
@@ -71,21 +74,39 @@ export default function ManageActivity() {
       body: JSON.stringify(toInput) // body data type must match "Content-Type" header
     });
     let body = await response.json();
+    console.log("POST body: "+body);
     console.log(body.id);
-    setMessage(body.id ? "Usuário salvo com sucesso!" : "Erro ao salvar usuário.");
+    setMessage(body.id ? "Atividade salva com sucesso!" : "Erro ao salvar atividade.");
   }
 
+  // TODO
+  async function sampleFunc() {
+    let response = await fetch("/api/gamification/1" );
+    let body = await response.json();
+    console.log(response);
+    console.log(body);
+    setUpdateData(body);
+  }
+  // {data?.map(row => (
+  //     <TableRow key={row.activity_description}>
+  //       <TableCell align="center">{row.activity_description}</TableCell>
+  //       <TableCell align="center">{row.activity_level}</TableCell>
+  //       <TableCell align="center">{row.activity_points}</TableCell>
+  //     </TableRow>
+  // ))}
+
   const handleSubmit = variables => {
-    const toInput = { user_username, user_password, user_email, user_first_name, user_last_name, user_created_by, user_terminated_by, user_status };
-    sampleFunc(toInput);
-    setUsername("");
-    setPassword("");
-    setEmail("");
-    setFirst_name("");
-    setLast_name("");
-    setUser_created_by(new Date("1998-04-02T21:11:54"));
-    setUser_terminated_by(null);
-    setUser_status(true);
+    const toInput = { gamification };
+    sampleFunc(data);
+
+    setUpdateData(data);
+    //TODO
+    // setGamification(setGamification_id(1),);
+    // isTcc1MinimoDe67, isTcc1EscolherAreaDeInteresse
+    // setIsTcc1MinimoDe67(["Mínimo de 67% da carga horária total das disciplinas obrigatórias do curso", "L1", 50, isTcc1MinimoDe67Checked]);
+    // setIsTcc1EscolherAreaDeInteresse(["Escolher área de interesse no curso", "L1", 50, isTcc1EscolherAreaDeInteresseChecked]);
+
+    console.log("Submit data: "+data);
   };
 
   if (firstLoad) {
@@ -104,73 +125,58 @@ export default function ManageActivity() {
           Gerenciar Atividades do Aluno
         </Typography>
         <form className={classes.form} noValidate>
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="username"
-                value={user_username}
-                label="Usuário"
-                name="username"
-                autoComplete="Usuário"
-                onChange={handleUsernameChange}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="password"
-                value={user_password}
-                label="Senha"
-                name="password"
-                autoComplete="********"
-                onChange={handlePasswordChange}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="email"
-                value={user_email}
-                label="E-mail"
-                name="email"
-                autoComplete="exemplo@exemplo.com"
-                onChange={handleEmailChange}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                autoComplete="Nome"
-                name="first_name"
-                variant="outlined"
-                required
-                fullWidth
-                value={user_first_name}
-                id="first_name"
-                label="Nome"
-                onChange={handleFirst_nameChange}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="last_name"
-                value={user_last_name}
-                label="Sobrenome"
-                name="last_name"
-                autoComplete="Sobrenome"
-                onChange={handleLast_nameChange}
-              />
-            </Grid>
-          </Grid>
+          <div style={{ display: "block", padding: 30 }}>
+            <h4>TCC I</h4>
+            <FormControlLabel
+                control={
+                  <Switch
+                      checked={isTcc1MinimoDe67Checked}
+                      onChange={() => {
+                        setIsTcc1MinimoDe67Checked((prev) => !prev);
+                      }}
+                  />
+                }
+                label="Vc já cumpriu 67% da sua carga horária?"
+            />
+            {/*<div style={{ display: "flex" }}>*/}
+            {/*  <Slide in={isTcc1MinimoDe67Checked}>*/}
+            {/*    <Paper elevation={5} style={{ margin: 5 }}>*/}
+            {/*      <svg style={{ width: 100, height: 100 }}>*/}
+            {/*        <polygon*/}
+            {/*            points="0,80 45,00, 80,70"*/}
+            {/*            style={{*/}
+            {/*              fill: "orange",*/}
+            {/*              stroke: "dimgrey",*/}
+            {/*              strokeWidth: 1,*/}
+            {/*            }}*/}
+            {/*        />*/}
+            {/*      </svg>*/}
+            {/*    </Paper>*/}
+            {/*  </Slide>*/}
+            {/*</div>*/}
+            <FormControlLabel
+                control={
+                  <Switch
+                      checked={isTcc1CourseChecked}
+                      onChange={() => {
+                          setIsTcc1CourseChecked((prev) => !prev);
+                      }}
+                  />
+                }
+                label="Qual o seu curso?"
+            />
+            <FormControlLabel
+                control={
+                  <Switch
+                      checked={isTcc1EscolherAreaDeInteresseChecked}
+                      onChange={() => {
+                        setIsTcc1EscolherAreaDeInteresseChecked((prev) => !prev);
+                      }}
+                  />
+                }
+                label="Qual a área que você mais gosta?"
+            />
+          </div>
           <Button
             // type="submit"
             fullWidth

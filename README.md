@@ -1,6 +1,6 @@
 # TCCFun
 It's a gamified flow on a WEB System to support IT students on the term paper course on UFBA. It includes the use of the React, Spring Boot, Hibernate and MySQL technologies
-
+My final paper advisor is Vaninha Vieira.
 It was developed following the tutorial that you can visit the article on medium: [How to build and deploy React app with Spring Boot and MySQL server](https://medium.com/@mukundmadhav/build-and-deploy-react-app-with-spring-boot-and-mysql-6f888eb0c600) and using https://github.com/mukundmadhav/react-springboot-mysql from it as framework. See more about Mukund Madhav in https://mukundmadhav.com/
 
 ## Installation
@@ -48,14 +48,22 @@ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDial
     ```
 * Create/discover how to edit one User by id (using the post method on service rs) (It isn't a priority)
   * Get done the edit profile page
+* Deploy a version on heroku
+* Use the educational pack to deploy on DigitalOcean
+  * Share the prototype link with Vaninha and colleagues. 
 * Create/discover how to add activity to an user>gamification
     * Get done the Manage Activity page
-      * Use switch
-      * https://github.com/mui/material-ui
-      * https://github.com/mui/material-ui/tree/master/examples
-      * https://v4.mui.com/pt/components/switches/
-      * https://v4.mui.com/pt/components/switches/#when-to-use
-      * https://uxplanet.org/checkbox-vs-toggle-switch-7fc6e83f10b8
+    * Read and do https://medium.com/nextux/how-to-design-a-form-wizard-b85fe1cc665a
+    * Example https://github.com/eloudsa/react-wizard
+    * Doc https://material.io/
+      * https://material.io/develop/web
+      * https://material.io/resources/tutorials#web
+      * Use "Não linear" Stepper from https://mui.com/pt/material-ui/react-stepper/
+          * https://github.com/mui/material-ui
+          * https://github.com/mui/material-ui/tree/master/examples
+          * https://v4.mui.com/pt/components/switches/
+          * https://v4.mui.com/pt/components/switches/#when-to-use
+          * https://uxplanet.org/checkbox-vs-toggle-switch-7fc6e83f10b8
     * Check if the View Activities from an user page is working properly
 * Add in the POM the Security dependency and discover how it works. It brings a Login page
 ```sh
